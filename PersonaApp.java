@@ -27,4 +27,11 @@ public class PersonaApp {
 
         return personas;
     }
+
+    public static void mostrarNombreYGenero(List<Persona> personas) {
+        System.out.println("Nombre y Género de las personas:");
+        for (Persona persona : personas) {
+            System.out.println(persona.getNombre() + " - " + persona.getGenero());
+        }
+    }
 }
