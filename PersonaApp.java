@@ -34,4 +34,12 @@ public class PersonaApp {
             System.out.println(persona.getNombre() + " - " + persona.getGenero());
         }
     }
+
+    public static double calcularPromedioEdad(List<Persona> personas) {
+        int suma = 0;
+        for (Persona persona : personas) {
+            suma += persona.getEdad();
+        }
+        return (double) suma / personas.size();
+    }
 }
