@@ -6,6 +6,21 @@ public class PersonaApp {
 
     private static final Scanner scanner = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        List<Persona> personas = capturarPersonas(5);
+
+        mostrarNombreYGenero(personas);
+
+        double promedio = calcularPromedioEdad(personas);
+        System.out.println("Promedio de edad: " + promedio);
+
+        int masculinos = contarGenero(personas, "Masculino");
+        int femeninos = contarGenero(personas, "Femenino");
+
+        System.out.println("Cantidad de Masculinos: " + masculinos);
+        System.out.println("Cantidad de Femeninos: " + femeninos);
+    }
+
     public static List<Persona> capturarPersonas(int cantidad) {
         List<Persona> personas = new ArrayList<>();
 
