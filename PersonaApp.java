@@ -42,4 +42,14 @@ public class PersonaApp {
         }
         return (double) suma / personas.size();
     }
+
+    public static int contarGenero(List<Persona> personas, String generoBuscado) {
+        int contador = 0;
+        for (Persona persona : personas) {
+            if (persona.getGenero().equalsIgnoreCase(generoBuscado)) {
+                contador++;
+            }
+        }
+        return contador;
+    }
 }
